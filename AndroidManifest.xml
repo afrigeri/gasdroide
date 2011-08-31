@@ -14,5 +14,15 @@
             </intent-filter>
         </activity>
 
+        <!--  <activity android:name=".AppPreferences" /> -->
+        <!--  <activity android:name=".ShowSettingsActivity" /> -->
+        <activity android:label="Preferences" android:name="HelloPreferences"/>
+        <activity android:label="Preferences" android:name=".Preferences"></activity>
+        <activity android:label="ShowSettingsActivity" android:name=".ShowSettingsActivity"></activity>
+        
+        <activity android:name=".EditPreferences"
+          android:label="EditPreferences">
+        </activity>
+
     </application>
 </manifest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string-array name="updateInterval">
+        <item name="1000">Every second</item>
+        <item name="500">Every 0.5 seconds</item>
+        <item name="250">Every 0.25 seconds</item>
+        <item name="100">Every 0.1 seconds</item>
+    </string-array>
+    
+    <string-array name="updateIntervalValues">
+        <item name="1000">1000</item>
+        <item name="500">500</item>
+        <item name="250">250</item>
+        <item name="100">100</item>
+    </string-array>
+    
+    <string-array name="dataInterface">
+        <item name="1">Analog Devices Model XXXX</item>
+    </string-array>
+    	
+    <string-array name="dataInterfaceValues">
+        <item name="1">1</item>
+    </string-array>	
+	
+</resources>
+

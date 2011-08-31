@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="User Settings" android:summary="The settings by the user">
+        <EditTextPreference android:key="username" android:title="Username" android:summary="Username within the survey project"></EditTextPreference>
+        <EditTextPreference android:key="password" android:title="Password"></EditTextPreference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Interface" android:summary="AD Converter">
+        
+        <ListPreference android:title="Interface" android:key="data_interface" android:entryValues="@array/dataInterfaceValues" android:entries="@array/dataInterface" android:summary="Hardware interface model"></ListPreference><ListPreference android:entryValues="@array/updateIntervalValues" android:entries="@array/updateInterval" android:title="updateInterval" android:summary="Sampling Rate" android:key="update_interval"></ListPreference>
+    </PreferenceCategory>
+    
+</PreferenceScreen>
