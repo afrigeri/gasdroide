@@ -4,6 +4,7 @@
       android:versionCode="1"
       android:versionName="1.0">
     <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
 
     <application android:icon="@drawable/icon" android:label="@string/app_name">
         <activity android:name=".GasdroideActivity"
@@ -22,7 +23,11 @@
         
         <activity android:name=".EditPreferences"
           android:label="EditPreferences">
+        <activity android:label="GasDataReader" android:name=".GasDataReader"></activity> 
+        <activity android:label="ADInterface" android:name=".ADInterface"></activity> 
+        <activity android:label="IntDummy" android:name=".IntDummy"></activity> 
         </activity>
 
     </application>
+	<uses-permission android:name="android.permission.BLUETOOTH" />
 </manifest>

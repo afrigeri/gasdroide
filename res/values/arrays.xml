@@ -17,10 +17,12 @@
     </string-array>
     
     <string-array name="dataInterface">
+        <item name="0">Dummy</item>
         <item name="1">Analog Devices Model XXXX</item>
     </string-array>
     	
     <string-array name="dataInterfaceValues">
+        <item name="1">0</item>
         <item name="1">1</item>
     </string-array>	
 	

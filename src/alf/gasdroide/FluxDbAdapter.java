@@ -1,3 +1,24 @@
+//
+// Copyright 2010,2011 Alessandro Frigeri
+//
+// This file is part of GasDroide.
+//
+// GasDroide is free software: you can redistribute it and/or modify it
+// under the terms of the GNU General Public License as published by the
+// Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// GasDroide is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+// See the GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License along
+// with GasDroide. If not, see http://www.gnu.org/licenses/.
+//
+//
+//
+
 package alf.gasdroide;
 
 import android.content.ContentValues;
@@ -33,13 +54,12 @@ public class FluxDbAdapter {
 	}
 
 	/**
-	 * Create a new flux record If the todo is successfully created return the new
+	 * Create a new flux record If the table is successfully created return the new
 	 * rowId for that note, otherwise return a -1 to indicate failure.
 	 */
-	public long createFluxRecord(String fluxid, String clock,
+	public long createFluxRecord(String fluxid, long clock,
 			String value_ppm) {
-		ContentValues initialValues = createContentValues(fluxid, clock,
-				value_ppm);
+		ContentValues initialValues = createContentValues(fluxid, clock, value_ppm);
 
 		return database.insert(DATABASE_TABLE, null, initialValues);
 	}
@@ -47,7 +67,7 @@ public class FluxDbAdapter {
 	/**
 	 * Update the flux
 	 */
-	public boolean updateTodo(long rowId, String fluxid, String clock,
+	public boolean updateTodo(long rowId, String fluxid, long clock,
 			String value_ppm) {
 		ContentValues updateValues = createContentValues(fluxid, clock,
 				value_ppm);
@@ -75,7 +95,7 @@ public class FluxDbAdapter {
 	}
 
 	/**
-	 * Return a Cursor positioned at the defined todo
+	 * Return a Cursor positioned at the defined rowId
 	 */
 	public Cursor fetchFlux(long rowId) throws SQLException {
 		Cursor mCursor = database.query(true, DATABASE_TABLE, new String[] {
@@ -87,7 +107,7 @@ public class FluxDbAdapter {
 		return mCursor;
 	}
 
-	private ContentValues createContentValues(String fluxid, String clock,
+	private ContentValues createContentValues(String fluxid, long clock,
 			String value_ppm) {
 		ContentValues values = new ContentValues();
 		values.put(KEY_FLUXID, fluxid);

@@ -9,4 +9,8 @@
     android:layout_height="wrap_content" 
     android:text="@string/hello"
     />
+<Button android:layout_height="wrap_content" android:text="Check Interface" android:id="@+id/button1" android:layout_width="match_parent" android:onClick="showStatus"></Button>
+<TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="check interface ...." android:id="@+id/textView1" android:layout_width="166dp"></TextView>
+<Button android:layout_height="wrap_content" android:text="Start Acquisition" android:id="@+id/button2" android:layout_width="match_parent" android:onClick="startAcquisition"></Button>
+<TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:text="No data yet..." android:id="@+id/textView2"></TextView>
 </LinearLayout>
